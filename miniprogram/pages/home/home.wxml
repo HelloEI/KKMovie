@@ -4,7 +4,7 @@
       <block wx:for="{{recommendList}}">
         <swiper-item class="movie-item">
           <view class='movie-bg'>
-            <image class='movie-img' src="{{item.image}}" mode="widthFix" bindtap='skipToDetail'></image>
+            <image class='movie-img' src="{{item.image}}" data-movieid="{{item.movieID}}" mode="widthFix" bindtap='skipToDetail'></image>
           <view class='movie-title'>{{item.title}}</view>
           </view>
         </swiper-item>

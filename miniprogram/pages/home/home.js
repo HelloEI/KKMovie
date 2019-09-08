@@ -11,6 +11,7 @@ Page({
     movieImg: '',
     headshort: '',
     name: '',
+    movieId:'',
     indicatorDots: false,
     autoplay: true,
     interval: 5000,
@@ -38,8 +39,10 @@ Page({
     })
   },
   //跳转电影详情
-  skipToDetail() {
-    let movieId = this.data.recommendMovie.movieId
+  skipToDetail(event) {
+    //let movieId = this.data.recommendMovie.movieID
+    let movieId = event.currentTarget.dataset.movieid
+    console.log(movieId)
     wx.navigateTo({
       url: '../movieDetail/movieDetail?movieId=' + movieId,
     })
@@ -52,6 +55,7 @@ Page({
       name: 'movieComments',
       success: res => {
         let recommendMovie = this.getRandomMovie(res.result.data);
+        //let recommendMovie = res.result.data;
         let recommendList = res.result.data
         this.setData({
           recommendMovie,
@@ -59,9 +63,12 @@ Page({
           movieTitle: recommendMovie.title,
           movieImg: recommendMovie.image,
           headshort: recommendMovie.headshort,
-          name: recommendMovie.name
+          name: recommendMovie.userName,
+          movieId: recommendMovie.movieID,
+          id:recommendMovie._id
         })
         console.log(recommendList)
+        console.log(recommendMovie)
       },
       fail: console.errorerror
     })

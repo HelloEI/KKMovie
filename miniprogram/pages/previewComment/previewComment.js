@@ -54,7 +54,7 @@ Page({
   saveToComment() {
     db.collection('movieComments').add({
       data: {
-        name: this.data.name,
+        name: this.data.userName,
         title: this.data.title,
         headshort: this.data.headshort,
         content: this.data.content,

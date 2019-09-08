@@ -79,7 +79,7 @@ Page({
           headshort: this.data.comment.headshort,
           title: this.data.comment.title,
           image: this.data.comment.image,
-          name: this.data.comment.name
+          name: this.data.comment.userName
         },
         success: (res) => {
           console.log(res)

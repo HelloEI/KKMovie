@@ -11,9 +11,9 @@
 		"checkInvalidKey": true,
 		"uglifyFileName": true
 	},
-	"appid": "wx1de2c2a0a93c9a27",
+	"appid": "wx78aeabb6f71ae402",
 	"projectname": "KKMovie",
-	"libVersion": "2.2.5",
+	"libVersion": "2.7.7",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {
