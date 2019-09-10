@@ -29,8 +29,8 @@
 }
 .movie-des{
   position: relative;
-  margin-top: 20rpx;
-  font-size:36rpx;
+  margin-top: 50rpx;
+  font-size:32rpx;
 }
 .skip-buttons{
   display: flex;
@@ -46,6 +46,7 @@
   border: 1px solid #7F99AF;
   color: #7F99AF;
   border-radius: 10rpx;
+  font-size:32rpx;
 }
 .skip-buttons .btn:first-child{
   margin-right: 20rpx;

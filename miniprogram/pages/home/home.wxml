@@ -4,16 +4,16 @@
       <block wx:for="{{recommendList}}">
         <swiper-item class="movie-item">
           <view class='movie-bg'>
-            <image class='movie-img' src="{{item.image}}" data-movieid="{{item.movieID}}" mode="widthFix" bindtap='skipToDetail'></image>
-          <view class='movie-title'>{{item.title}}</view>
+            <image class='movie-img' src="{{item.movie.data[0].image}}" data-movieid="{{item.movie.data[0].movieID}}" mode="widthFix" bindtap='skipToDetail'></image>
+          <view class='movie-title'>{{item.movie.data[0].title}}</view>
+          <view class='movie-comment' bindtap='skipToComment'>
+      <image class="head-img" src='{{item.comment.list[0].headshort}}' mode="aspectFill"></image>
+      <view class='comment-tip'>{{item.comment.list[0].userName}}给你推荐了一部电影</view>
+    </view>
           </view>
         </swiper-item>
       </block>
     </swiper>
-    <!-- <view class='movie-comment' bindtap='skipToComment'>
-      <image class="head-shot" src='{{headshort}}' mode="aspectFill"></image>
-      <view class='comment-tip'>{{name}}给你推荐了一部电影</view>
-    </view> -->
   <view class='skip-buttons'>
     <view class='btn iconfont icon-remen' bindtap='skipToHot'>热门</view>
     <view class='btn iconfont icon-wode' bindtap='skipToMy'>我的</view>
