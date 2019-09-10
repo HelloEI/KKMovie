@@ -6,7 +6,7 @@
           <view class='movie-bg'>
             <image class='movie-img' src="{{item.movie.data[0].image}}" data-movieid="{{item.movie.data[0].movieID}}" mode="widthFix" bindtap='skipToDetail'></image>
           <view class='movie-title'>{{item.movie.data[0].title}}</view>
-          <view class='movie-comment' bindtap='skipToComment'>
+          <view class='movie-comment' data-commentid="{{item.comment.list[0]._id}}" bindtap='skipToComment'>
       <image class="head-img" src='{{item.comment.list[0].headshort}}' mode="aspectFill"></image>
       <view class='comment-tip'>{{item.comment.list[0].userName}}给你推荐了一部电影</view>
     </view>

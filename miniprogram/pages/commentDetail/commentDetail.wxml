@@ -1,12 +1,12 @@
 <!--miniprogram/pages/commentDetail/commentDetail.wxml-->
 <view class='comment-container'>
-  <image class='comment-img' src='{{comment.image}}' mode="widthFix"></image>
+  <image class='comment-img' src='{{movie.image}}' mode="widthFix"></image>
   <view class='comment-detail'>
-    <view class='comment-title'>{{comment.title}}</view>
+    <view class='comment-title'>{{movie.title}}</view>
     <view class='comment-content'>
       <view class='comment-top'>
         <image class='head-short' src='{{comment.headshort}}'></image>
-        <view class='comment-name'>{{comment.name}}的影评</view>
+        <view class='comment-name'>{{comment.userName}}的影评</view>
       </view>
       <view class='comment-bottom'>
         <view wx:if="{{comment.content!=''}}">

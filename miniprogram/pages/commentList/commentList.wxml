@@ -5,7 +5,7 @@
       <view class='comment-item'>
         <view class='item-top'>
           <image class='item-header' src='{{item.headshort}}'></image>
-          <view>{{item.name}}</view>
+          <view>{{item.userName}}</view>
         </view>
         <view class='item-bottom'>
           <view class='item-content' wx:if="{{item.content!=''}}">{{item.content}}</view>

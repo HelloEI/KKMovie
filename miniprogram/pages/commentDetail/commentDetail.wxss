@@ -65,6 +65,7 @@
 }
 .content-txt{
   margin-left: 20rpx;
+  font-size: 32rpx;
 }
 .head-short{
   width: 85rpx;

@@ -9,6 +9,7 @@ Page({
    */
   data: {
     comment: {},
+    movie:{},
     actionSheetHidden: true,
     actionSheetItems: ['文字', '音频'],
     addToFavorite: false,
@@ -96,6 +97,9 @@ Page({
    */
   onLoad: function (options) {
     this.getComment(options.commentId)
+    //console.log(this.data.comment.movieID)
+    //this.getMovie(this.data.movieId)
+    
     wx.showLoading({
       title: '',
     })
@@ -107,11 +111,30 @@ Page({
         id:id
       }
     }).then(res=>{
+      console.log('comment', res.result)
+      this.getMovie(res.result.data[0].movieID)
      this.setData({
-       comment:res.result.data[0]
+       comment:res.result.data[0],
      })
      wx.hideLoading()
     }).catch(error=>{
+      console.log(error)
+      wx.hideLoading()
+    })
+  },
+  getMovie(movieId) {
+    wx.cloud.callFunction({
+      name: 'getMovieById',
+      data: {
+        movieId: movieId
+      }
+    }).then(res => {
+      console.log('movie', res.result)
+      this.setData({
+        movie: res.result.data[0]
+      })
+      wx.hideLoading()
+    }).catch(error => {
       console.log(error)
       wx.hideLoading()
     })

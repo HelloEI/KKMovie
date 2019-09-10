@@ -35,9 +35,11 @@ Page({
     })
   },
   // 跳转影评列表页
-  skipToComment(){
+  skipToComment(event){
+    let movieId = event.currentTarget.dataset.movieid
+    console.log(event.currentTarget.dataset)
     wx.navigateTo({
-      url: '../commentList/commentList',
+      url: '../commentList/commentList?movieId=' + movieId,
     })
   },
   /**

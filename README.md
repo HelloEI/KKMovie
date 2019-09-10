@@ -1,6 +1,7 @@
 # 简介
 
-借助微信小程序云开发进行功能搭建，具体可参照微信小程序·云开发文档
+- 借助微信小程序云开发进行功能搭建，具体可参照微信小程序·云开发文档
+- 在之前的基础上修改了数据结构，调整了动态效果，优化了功能，并fix若干bug等。
 
 ## 参考文档
 
@@ -10,15 +11,16 @@
 
 - 存放路径：database 文件夹下，打开小程序云开发—数据库导入即可
 
-## 功能展示
-- 高分电影推荐：使用[微信小程序swiper组件](https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html)实现图片滚动播放功能<br>
-![image](https://github.com/taffy99/KKMovie/blob/master/miniprogram/images/gfenMv.gif)
-- 热门电影列表:使用[列表渲染](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/list.html)&[下拉刷新](https://developers.weixin.qq.com/miniprogram/dev/api/ui/pull-down-refresh/wx.stopPullDownRefresh.html)功能进行列表展示<br>
-![image](https://github.com/taffy99/KKMovie/blob/master/miniprogram/images/hotMV.gif)
-- 我的：[微信授权登陆](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/authorize.html)获取用户信息<br>
-![image](https://github.com/taffy99/KKMovie/blob/master/miniprogram/images/wode.gif)
-- 电影详情<br><br>
-![image](https://github.com/taffy99/KKMovie/blob/master/miniprogram/images/mvdetail1.png)
-![image](https://github.com/taffy99/KKMovie/blob/master/miniprogram/images/mvdetail2.png)
-- 评论添加（文字、语音）
-- 评论列表
+## 功能实现
+- 首页：随机展示当前热门电影的某一条影评。
+- 电影列表页：展示当前最热门的若干部电影（至少5部）。
+- 电影详情页：展示电影详情信息。
+- 影评列表页：展示某电影的影评列表。
+- 影评详情页：展示某条具体的影评内容。
+- 影评编辑页：用户能在此页面编辑自己的影评内容。
+- 影评预览页：预览已编辑完成的影评。
+- 个人中心页：展示用户已收藏和已发布的影评列表。 
+
+## 参考代码：
+https://github.com/taffy99/KKMovie
+
